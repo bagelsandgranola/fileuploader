@@ -1,0 +1,27 @@
+.SearchBar__controls {
+   float: right;
+    margin: 20px;
+   padding: 20px;
+   width: 400px;
+   float: right;
+   
+
+}
+
+h1 {
+    margin: 0px;
+}
+
+.SearchBar__heading {
+    float: left;
+    margin: 20px;
+    padding: 20px;
+}
+
+.SearchBar {
+    display: inline-block;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}

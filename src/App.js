@@ -1,28 +1,55 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import SearchBar from './SearchBar/SearchBar';
+import FilterableList from './FilterableList/FilterableList';
+import './App.css'
 
-class App extends Component {
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchTerm: '',
+      selectedFilter: 'All'
+    }
+  }
+
+  handleFilterClick = (filter) => {
+    console.log("filter selected")
+
+    this.setState(
+      {
+        selectedFilter: filter,
+      }
+    )
+  }
+
+  handleSearch() {
+    console.log("search entered")
+  }
+
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        
+        <SearchBar 
+          searchTerm={this.state.searchTerm} 
+          selectedFilter={this.state.selectedFilter}
+          handleFilterClick={ (filter) => this.handleFilterClick(filter)}>
+        </SearchBar>
+
+        <FilterableList 
+        files={this.props.files} 
+        searchTerm={this.state.searchTerm} 
+        selectedFilter={this.state.selectedFilter}>
+        </FilterableList>
+
       </div>
     );
   }
 }
 
 export default App;
+

@@ -1,0 +1,10 @@
+.ControlBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.ControlBar_btn {
+    display: inline-block;
+    justify-content: space-between;
+}

@@ -1,0 +1,52 @@
+.ListItem{
+    display: flex;
+    padding-bottom: 20px;
+    box-shadow: 0 0 1px 0 rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+.ListItem_circle
+{
+    border: 1px solid grey;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ListItem_icon {
+    flex: 1;
+    padding-left: 20px;
+
+}
+
+.ListItem_content {
+  flex: 5;
+}
+
+.ListItem_heading {
+  display: flex;
+}
+
+.ListItem_size {
+    flex: 1;
+    text-align: right;
+}
+
+.ListItem_status > h3 {
+    font-size: 12px;
+}
+
+
+.ListItem_actions{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ControlBar {
+    padding-top: 20px;
+}
